@@ -8,8 +8,6 @@ class Solution:
         for num in nums1:
             
             while i < len(nums2) and num >= nums2[i]:
-                print(num)
-                print(nums2[i])
                 if num == nums2[i]:
                     if num not in intersected_array:
                         intersected_array.append(num)
