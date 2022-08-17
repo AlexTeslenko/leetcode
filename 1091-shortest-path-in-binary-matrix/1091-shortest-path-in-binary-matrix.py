@@ -12,7 +12,6 @@ class Solution:
         
         while queue:
             cur_node = queue.popleft()
-            print(cur_node)
             if cur_node[0] == len(grid) - 1 and cur_node[1] == len(grid[0]) - 1:
                 min_path = min(min_path, cur_node[2])
                 
