@@ -12,6 +12,5 @@ class Solution:
                 else:
                     num_right_parent += 1
         
-        print(num_right_parent)
         return len(stack) + num_right_parent
         
