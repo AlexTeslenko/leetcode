@@ -2,7 +2,6 @@ from collections import deque
 
 class Solution:
     def calculate(self, s: str) -> int:
-        result = 0
         stack = deque()
         i = 0
         while i < len(s):
@@ -27,7 +26,7 @@ class Solution:
                     cur_ch = cur_ch + s[i]
                     i += 1 
                 num_2 = int(cur_ch)
-                print(cur_ch)
+
                 cur_res = 0
                 if ch == '/':
                     cur_res = num_1 // num_2
@@ -35,10 +34,7 @@ class Solution:
                     cur_res = num_1 * num_2
                 
                 stack.append(str(cur_res))
-                #i += 1
-        
-        print(stack)
-        
+
         cur_res = int(stack.popleft())
         cur_op = '+'
         while stack:
@@ -52,8 +48,6 @@ class Solution:
                 cur_op = '+'
             else:
                 cur_op = '-'
-            
-        
         
         return cur_res
                     
