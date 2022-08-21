@@ -13,7 +13,6 @@ class Solution:
             new_node.next = new_node
             return  new_node
         
-        first_node = head
         prev, curr = head, head.next
         to_insert = False
         while curr:
@@ -27,7 +26,7 @@ class Solution:
                 new_node = Node(insertVal)
                 new_node.next = curr
                 prev.next = new_node
-                break
+                return head
             
             prev = curr
             curr = curr.next
@@ -35,7 +34,9 @@ class Solution:
             if prev == head:
                 break
         
-        prev.next = Node(insertVal, curr)
+        new_node = Node(insertVal)
+        new_node.next = curr
+        prev.next = new_node
         
-        return first_node
+        return head
             
