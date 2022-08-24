@@ -1,9 +1,7 @@
 class Solution:
     def isValidPalindrome(self, s: str, k: int) -> bool:
-        self.mp = {}
         self.cache = [[-1 for i in s] for j in s]
         answ = self.construct_palindrome1(s, 0, len(s)-1)
-        print(answ)
         return answ <= k
     
     def construct_palindrome1(self, s, i, j):
