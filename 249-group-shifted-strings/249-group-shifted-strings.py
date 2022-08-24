@@ -8,7 +8,6 @@ class Solution:
             for ch in string:
                 shifted_str += str((ord(ch) - shift) % 26 - ord('a')) 
             
-            print(shifted_str)
             if shifted_str not in hash_maps:
                 hash_maps[shifted_str] = []
             hash_maps[shifted_str].append(string)
