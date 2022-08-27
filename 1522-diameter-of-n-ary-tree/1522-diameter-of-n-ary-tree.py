@@ -14,7 +14,6 @@ class Solution:
         """
         max_dim = [0]
         dm = self.dfs(root, max_dim)
-        #print(max_dim)
         
         return max_dim[0]
         
@@ -36,6 +35,5 @@ class Solution:
                 for j in range(i+1, len(root.children)):
                     max_dim[0] = max(max_dim[0], children_dims[i]+children_dims[j])
         
-        print(children_dims)
         return 1+max(children_dims) if children_dims else 1
         
