@@ -15,8 +15,7 @@ class Solution:
         print(low)
         print(middle)
         print((nums[middle-1] - zero_idx_el - (middle-1)))
-        if middle > 0:
-            return nums[low-1] + k - (nums[low-1] - zero_idx_el - (low-1))
-        else:
-            return nums[low-1] + k
+
+        return nums[low-1] + k - (nums[low-1] - zero_idx_el - (low-1))
+
         
