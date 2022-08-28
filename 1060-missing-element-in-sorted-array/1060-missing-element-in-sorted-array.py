@@ -10,11 +10,6 @@ class Solution:
                 high = middle - 1
             else:
                 low = middle + 1
-        
-        print('------')
-        print(low)
-        print(middle)
-        print((nums[middle-1] - zero_idx_el - (middle-1)))
 
         return nums[low-1] + k - (nums[low-1] - zero_idx_el - (low-1))
 
