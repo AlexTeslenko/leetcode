@@ -8,7 +8,7 @@ class Solution:
             cur_idx = int(cur_log[0])
             op = cur_log[1]
             cur_time = int(cur_log[2])
-            print(op)
+
             if op == 'start':
                 stack.append([cur_idx, op, cur_time])
             else:
