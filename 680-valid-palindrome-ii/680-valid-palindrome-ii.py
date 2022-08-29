@@ -4,7 +4,6 @@ class Solution:
             return True
         
         left_ptr, right_ptr = 0, len(s)-1
-        can_remove_ch = True
         
         while left_ptr < right_ptr:
             if s[left_ptr] == s[right_ptr]:
