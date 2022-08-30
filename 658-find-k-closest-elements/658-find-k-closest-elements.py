@@ -4,10 +4,40 @@ class Solution:
         output = deque([])
         closest_num = math.inf
         closest_idx = -1
-        for i in range(len(arr)):
-            if abs(arr[i] - x) < abs(closest_num - x):
-                closest_num = arr[i]
-                closest_idx = i
+        left_ptr, right_ptr = 0, len(arr) - 1
+        while left_ptr <= right_ptr:
+            middle = left_ptr + (right_ptr - left_ptr) // 2
+            if x == arr[middle]:
+                break
+            elif x < arr[middle]:
+                right_ptr = middle - 1
+            else:
+                left_ptr = middle + 1
+        
+        print(middle)
+        
+        if middle != x :
+            if middle > 0:
+                if abs(arr[middle-1] - x) < abs(arr[middle] - x) or \
+                (abs(arr[middle-1] - x) == abs(arr[middle] - x) and arr[middle-1] < arr[middle]):
+                    print("old_middle: ", middle)
+                    middle = middle - 1
+            elif middle < len(arr)-1:
+                if abs(arr[middle+1] - x) < abs(arr[middle] - x) or \
+                (abs(arr[middle+1] - x) == abs(arr[middle] - x) and arr[middle+1] < arr[middle]):
+                    print("old_middle: ", middle)
+                    middle = middle + 1
+                
+
+        closest_num = arr[middle]
+        closest_idx = middle
+        
+        print(closest_idx)
+                
+        #for i in range(len(arr)):
+        #    if abs(arr[i] - x) < abs(closest_num - x):
+        #        closest_num = arr[i]
+        #        closest_idx = i
         
         output.append(closest_num)
         
