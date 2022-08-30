@@ -14,7 +14,6 @@ class Solution:
         left_ptr, right_ptr = closest_idx - 1, closest_idx + 1
         
         while len(output) < k:
-            #print(left_ptr, right_ptr)
             if left_ptr >= 0 and right_ptr < len(arr):
                 if abs(arr[left_ptr] - x) < abs(arr[right_ptr] - x):
                     output.appendleft(arr[left_ptr])
@@ -35,6 +34,5 @@ class Solution:
             elif right_ptr >= len(arr):
                 output.appendleft(arr[left_ptr])
                 left_ptr -= 1
-            #print(output)
         
         return list(output)
