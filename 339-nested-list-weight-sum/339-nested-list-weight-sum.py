@@ -43,18 +43,16 @@
 
 class Solution:
     def depthSum(self, nestedList: List[NestedInteger]) -> int:
-        level_sum = self.calcSum(nestedList, 1)
+        return self.calc_sum(nestedList, 1)
         
-        return level_sum
-        
-    def calcSum(self, lst, cur_level):
-        level_sum = 0
+    
+    def calc_sum(self, lst, depth):
+        cum_sum = 0
         
         for el in lst:
             if el.isInteger():
-                level_sum += el.getInteger() * cur_level
+                cum_sum += el.getInteger() * depth
             else:
-                level_sum += self.calcSum(el.getList(), cur_level+1)
+                cum_sum += self.calc_sum(el.getList(), depth+1)
         
-        return level_sum
-        
+        return cum_sum
