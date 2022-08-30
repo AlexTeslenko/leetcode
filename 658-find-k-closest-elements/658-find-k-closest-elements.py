@@ -13,9 +13,7 @@ class Solution:
                 right_ptr = middle - 1
             else:
                 left_ptr = middle + 1
-        
-        print(middle)
-        
+
         if middle != x :
             if middle > 0:
                 if abs(arr[middle-1] - x) < abs(arr[middle] - x) or \
@@ -31,13 +29,6 @@ class Solution:
 
         closest_num = arr[middle]
         closest_idx = middle
-        
-        print(closest_idx)
-                
-        #for i in range(len(arr)):
-        #    if abs(arr[i] - x) < abs(closest_num - x):
-        #        closest_num = arr[i]
-        #        closest_idx = i
         
         output.append(closest_num)
         
