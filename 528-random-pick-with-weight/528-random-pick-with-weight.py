@@ -3,28 +3,32 @@ class Solution:
 
     def __init__(self, w: List[int]):
         self.w = w
-        self.probs = [weight / sum(w) for weight in self.w]
+        probs = [el / sum(w) for el in w]
         self.ranges = []
-        
-        range_start = 0
-        for i, prob in enumerate(self.probs):
-            range_end = range_start + prob
+        prev_range_end = 0
+    
+        for i in range(len(probs)):
+            range_start = prev_range_end
+            range_end = range_start + probs[i]
+            prev_range_end = range_end
             self.ranges.append((range_start, range_end))
-            range_start = range_end
 
+    
     def pickIndex(self) -> int:
-        rand = random.random()
-        left_idx, right_idx = 0, len(self.ranges)
-        while left_idx < right_idx:
-            middle_idx = left_idx + (right_idx - left_idx) // 2
-            rn = self.ranges[middle_idx]
-            if rn[0] <=  rand <= rn[1]:
-                return middle_idx
-            elif rand > rn[1]:
-                left_idx =  middle_idx
+        random_num = random.random()
+        low, high = 0, len(self.ranges)
+        while low <= high:
+            middle = low + (high - low) // 2
+            if self.ranges[middle][0] <= random_num < self.ranges[middle][1]:
+                return middle
+            elif random_num > self.ranges[middle][1]:
+                low = middle + 1
             else:
-                right_idx = middle_idx
-        return left_idx
+                high = middle - 1
+        
+        return middle
+
+        
             
             
         
