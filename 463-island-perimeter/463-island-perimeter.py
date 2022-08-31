@@ -17,7 +17,7 @@ class Solution:
                     if col < len(grid[0]) - 1:
                         if grid[row][col+1] == 1:
                             cur_pr -= 1
-                    print(cur_pr)
+
                     pr += cur_pr
         
         return pr
