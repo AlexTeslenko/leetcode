@@ -10,7 +10,6 @@ class Solution:
                     queue.pop()
             elif el not in ['', '.']:
                 queue.append(el)
-        
-        print(queue)     
+           
         return '/' + '/'.join(queue)
         
