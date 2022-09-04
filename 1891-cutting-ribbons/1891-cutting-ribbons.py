@@ -7,7 +7,6 @@ class Solution:
                 cur_ribbon = ribbons[i]
                 num_ribbons += cur_ribbon // length
             
-            print(length, num_ribbons)
             return num_ribbons
         
         if sum(ribbons) < k :
@@ -18,7 +17,6 @@ class Solution:
         while low <= high:
             middle = low + (high - low) // 2
             cur_num_ribbons = check_feasible(ribbons, middle)
-            #print(cur_num_ribbons)
             if cur_num_ribbons < k:
                 high = middle - 1 
             else:
