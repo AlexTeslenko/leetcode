@@ -1,24 +1,16 @@
 from collections import deque
 class Solution:
     def simplifyPath(self, path: str) -> str:
-        path_splited = path.split('/')
-        simplified_path = '/'
-        
         queue = deque()
-        for ch in path_splited:
-            if ch == '..':
-                if len(queue):
+        path_els = path.split('/')
+        print(path_els)
+        for el in path_els:
+            if el == '..':
+                if queue:
                     queue.pop()
-            elif ch not in ['.', '']:
-                queue.append(ch)
+            elif el not in ['', '.']:
+                queue.append(el)
         
-        while queue:
-            ch = queue.popleft()
-            simplified_path = simplified_path + ch + '/'
-        
-        if len(simplified_path) > 1:
-            simplified_path = simplified_path[:-1]
-        
-        return simplified_path
-            
+        print(queue)     
+        return '/' + '/'.join(queue)
         
