@@ -12,4 +12,5 @@ class Solution:
                 queue.append(el)
            
         return '/' + '/'.join(queue)
+    
         
