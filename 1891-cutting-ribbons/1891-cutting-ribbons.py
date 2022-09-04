@@ -23,7 +23,7 @@ class Solution:
                 max_lenght = middle
                 low = middle + 1
         
-        return max_lenght
+        return high
             
         
                     
