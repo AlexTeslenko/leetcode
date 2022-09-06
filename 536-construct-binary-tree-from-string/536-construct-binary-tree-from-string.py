@@ -35,12 +35,7 @@ class Solution:
                 
             if root.left and indx < len(s) and s[indx] == '(':
                 root.right, indx = str_to_tree(s, indx+1)
-                
-            #if indx < len(s) and s[indx] == ')':
-            #    return root, indx+1
-            #else:
-            #    return indx
-            
+
             return root, indx+1
             
         root, indx =  str_to_tree(s, 0)
