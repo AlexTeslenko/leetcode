@@ -7,13 +7,11 @@ class Solution:
             num = ''
             for ch in s:
                 cur_num = (ord(ch) - first_num) % 26
-                print(cur_num)
                 num = num + str(cur_num)
             
             if num not in hash_maps:
                 hash_maps[num] = []
             hash_maps[num].append(s)
         
-        print(hash_maps)
         return hash_maps.values()
             
