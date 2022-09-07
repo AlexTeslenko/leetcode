@@ -24,7 +24,6 @@ class Solution:
                     to_insert = True
             
             if to_insert:
-                print(cur_node.val)
                 new_node.next = prev_node.next
                 prev_node.next = new_node
                 return head
@@ -40,6 +39,9 @@ class Solution:
         
         return head
 
+    
+    
+    '''
         if not head:
             new_node = Node(insertVal)
             new_node.next = new_node
@@ -71,4 +73,4 @@ class Solution:
         prev.next = new_node
         
         return head
-            
+    '''
