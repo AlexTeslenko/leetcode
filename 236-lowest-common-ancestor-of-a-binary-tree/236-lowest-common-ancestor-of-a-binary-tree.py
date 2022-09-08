@@ -10,7 +10,6 @@ class Solution:
         self.p = p.val
         self.q = q.val
         self.lca = None
-        found_p_q = [False, False]
         self.dfs(root)
         
         return self.lca
@@ -34,9 +33,7 @@ class Solution:
         if found_p_q[0] and found_p_q[1] and not self.lca:
             self.lca = root
         
-        print(found_p_q)
-        print(root.val)
-        
+
         return found_p_q
         
             
