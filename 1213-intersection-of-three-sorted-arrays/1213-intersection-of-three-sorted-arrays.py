@@ -15,5 +15,4 @@ class Solution:
                     p2 += 1
                 else:
                     p3 += 1
-            #print(arr1[p1], arr2[p2], arr3[p3])
         return output
