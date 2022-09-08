@@ -10,7 +10,6 @@ class Solution:
         
         sm = 0
         for row in field:
-            print(sum(row))
             if sum(row) == 3:
                 return 'A'
             elif sum(row) == -3:
@@ -18,7 +17,6 @@ class Solution:
         
         for i in range(3):
             col_sum = sum([row[i] for row in field])
-            print(col_sum)
             if col_sum == 3:
                 return 'A'
             elif col_sum == -3:
@@ -26,7 +24,6 @@ class Solution:
         
         diag_1_sm = sum([row[i] for i, row in enumerate(field)])
         diag_2_sm = sum([row[len(field[0]) - i - 1] for i, row in enumerate(field)])
-        print(diag_1_sm, diag_2_sm)
         
         if diag_1_sm == 3 or diag_2_sm == 3:
             return 'A'
