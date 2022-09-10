@@ -25,9 +25,6 @@ class Solution:
                     
                     col -= 1
                 
-                col_start_postion = col+1
-
-                     
-            
+                col_start_postion = col+1               
         
         return first_one_col if first_one_col < 10000 else -1
