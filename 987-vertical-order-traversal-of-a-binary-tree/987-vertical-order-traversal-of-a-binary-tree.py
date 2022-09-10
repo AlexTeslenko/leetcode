@@ -21,10 +21,9 @@ class Solution:
                 queue.append((node.right, row+1, col+1))
         
        
-        print(col_to_node)
         sorted_keys = list(col_to_node.keys())
         sorted_keys.sort(key=lambda x: x[1])
-        print(sorted_keys)
+
         sorted_by_row = {}
         for key in sorted_keys:
             if key[0] not in sorted_by_row:
@@ -37,15 +36,7 @@ class Solution:
         sorted_keys.sort()
         
         output = [sorted_by_row[key] for key in sorted_keys]
-        print(sorted_by_row)
-            
-            
-            
-           
-        #print(col_to_node)
-        #for val in col_to_node.values():
-         #   val.sort()
-            
+
         return output
             
         
