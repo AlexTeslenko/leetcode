@@ -18,14 +18,15 @@ class Solution:
                 new_cur_s = cur_s+s[cur_i]
                 backtracking(s, cur_i+1, new_cur_s, left_prs, right_prs, removed_prs)
             else:
+                backtracking(s, cur_i+1, cur_s, left_prs, right_prs, removed_prs+1)
+                
                 if  s[cur_i] == '(':
                     new_cur_s = cur_s+s[cur_i]
                     backtracking(s, cur_i+1, new_cur_s, left_prs+1, right_prs, removed_prs)
-                    backtracking(s, cur_i+1, cur_s, left_prs, right_prs, removed_prs+1)
+                    
                 else:
                     new_cur_s = cur_s+s[cur_i]
                     backtracking(s, cur_i+1, new_cur_s, left_prs, right_prs+1, removed_prs)
-                    backtracking(s, cur_i+1, cur_s, left_prs, right_prs, removed_prs+1)
                     
         cur_s = ''
         backtracking(s, 0, cur_s, 0, 0, 0)
