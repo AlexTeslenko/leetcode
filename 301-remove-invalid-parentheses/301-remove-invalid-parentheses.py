@@ -10,8 +10,7 @@ class Solution:
                 
             if cur_i >= len(s):
                 if left_prs == right_prs and removed_prs <= min_removed:
-                    print(cur_s)
-                    output.append(cur_s[:])
+                    output.append(cur_s)
                 return
                     
 
