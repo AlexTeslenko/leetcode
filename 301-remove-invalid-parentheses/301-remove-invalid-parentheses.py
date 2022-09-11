@@ -14,22 +14,17 @@ class Solution:
                     output.append(cur_s[:])
                 return
                     
-                
-                
-            #print(cur_i)
+
             if s[cur_i] not in ['(', ')']:
                 new_cur_s = cur_s+s[cur_i]
-                #print(new_cur_s)
                 backtracking(s, cur_i+1, new_cur_s, left_prs, right_prs, removed_prs)
             else:
                 if  s[cur_i] == '(':
                     new_cur_s = cur_s+s[cur_i]
-                    #print(new_cur_s)
                     backtracking(s, cur_i+1, new_cur_s, left_prs+1, right_prs, removed_prs)
                     backtracking(s, cur_i+1, cur_s, left_prs, right_prs, removed_prs+1)
                 else:
                     new_cur_s = cur_s+s[cur_i]
-                    #print(new_cur_s)
                     backtracking(s, cur_i+1, new_cur_s, left_prs, right_prs+1, removed_prs)
                     backtracking(s, cur_i+1, cur_s, left_prs, right_prs, removed_prs+1)
                     
