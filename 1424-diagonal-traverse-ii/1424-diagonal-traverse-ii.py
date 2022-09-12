@@ -11,8 +11,7 @@ class Solution:
         
         for item in diags.values():
             output += reversed(item)
-        
-                    
+                      
         return output
                 
         
