@@ -3,7 +3,7 @@ class Solution:
     def numFriendRequests(self, ages: List[int]) -> int:
         total_friends = 0
         age_counter = Counter(ages)
-        print(age_counter)
+ 
         for age in age_counter:
             num_ages = age_counter[age]
             for friend_age in age_counter:
