@@ -23,7 +23,6 @@ class Solution:
                     if board[new_row][new_col] == 'M':
                         num_mines += 1
             
-            print(num_mines)
             if num_mines:
                 board[cur_row][cur_col] = str(num_mines)
                 return
