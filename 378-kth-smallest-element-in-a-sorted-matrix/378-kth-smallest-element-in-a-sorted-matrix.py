@@ -8,21 +8,13 @@ class Solution:
         heapq.heapify(heap)
         
         while k > 0:
-            #print(heap)
             el, row, col = heapq.heappop(heap)
             if row < len(matrix) and col+1 < len(matrix[0]):
                 heapq.heappush(heap, (matrix[row][col+1], row, col+1))
             k -= 1
         
-        #print(heap)
-        #el, row, col = heapq.heappop(heap)
         return el
-    
-    
-    
-    
-    
-    
+
     
     ''' 
         elements = []
