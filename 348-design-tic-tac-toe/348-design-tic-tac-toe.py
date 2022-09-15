@@ -22,9 +22,6 @@ class TicTacToe:
         if row == col:
             self.diags[0] += self.board[row][col]
         
-        #print(self.board)
-        #print(self.cols)
-        #print(self.rows)
         for col in self.cols:
             if self.cols[col] == self.n:
                 return 1
