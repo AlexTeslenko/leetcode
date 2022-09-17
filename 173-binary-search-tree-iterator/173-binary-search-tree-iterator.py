@@ -8,7 +8,7 @@ class BSTIterator:
 
     def __init__(self, root: Optional[TreeNode]):
         self.vals = []
-        self.cur_idx = 0
+        self.cur_idx = -1
         
         def _dfs(root):
             if not root:
@@ -21,12 +21,11 @@ class BSTIterator:
         _dfs(root)
             
     def next(self) -> int:
-        cur_val = self.vals[self.cur_idx]
         self.cur_idx += 1
-        return cur_val
+        return self.vals[self.cur_idx]
 
     def hasNext(self) -> bool:
-        if self.cur_idx < len(self.vals):
+        if self.cur_idx+1 < len(self.vals):
             return True
         return False
     
