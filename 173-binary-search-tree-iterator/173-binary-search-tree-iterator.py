@@ -20,18 +20,44 @@ class BSTIterator:
         
         _dfs(root)
             
-        
-
     def next(self) -> int:
         cur_val = self.vals[self.cur_idx]
         self.cur_idx += 1
         return cur_val
 
-
     def hasNext(self) -> bool:
         if self.cur_idx < len(self.vals):
             return True
         return False
+    
+'''
+def __init__(self, root: Optional[TreeNode]):
+        self.start_iter = 0
+        self.vals = []
+        self._dfs(root)
+        
+    def _dfs(self, root):
+        if root.left:
+            self._dfs(root.left)
+        
+        self.vals.append(root.val)
+        
+        if root.right:
+            self._dfs(root.right)
+        
+        
+
+    def next(self) -> int:
+        val =  self.vals[self.start_iter]
+        self.start_iter += 1
+        return val
+    
+
+    def hasNext(self) -> bool:
+        if self.start_iter < len(self.vals):
+            return True
+        return False
+'''
 
         
 
