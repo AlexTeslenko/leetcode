@@ -23,9 +23,6 @@ class CBTInserter:
             if cur_root.left and cur_root.right:
                 self.parents.popleft()
                 
-                
-           # self.queue.append(self.root)
-        
 
     def insert(self, val: int) -> int:
         new_node = TreeNode(val)
