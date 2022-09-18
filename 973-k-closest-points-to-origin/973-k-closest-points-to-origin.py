@@ -10,7 +10,7 @@ class Solution:
                 heapq.heappop(heap)
             
         return [[x, y] for dist, x, y in heap]
-        
+     
         
     '''
         dist_to_point = {}
