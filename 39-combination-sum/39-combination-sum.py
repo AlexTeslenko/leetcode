@@ -15,9 +15,7 @@ class Solution:
             
             recursive_find(candidates, cur_idx+1, cur_target-candidates[cur_idx], new_comb)
             recursive_find(candidates, cur_idx, cur_target-candidates[cur_idx], new_comb)
-            recursive_find(candidates, cur_idx+1, cur_target, cur_comb[:])
-            #recursive_find(candidates, cur_idx, cur_target, cur_comb[:])
-            
+            recursive_find(candidates, cur_idx+1, cur_target, cur_comb[:])           
         
         recursive_find(candidates, 0, target, [])
         
