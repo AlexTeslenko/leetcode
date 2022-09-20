@@ -20,13 +20,6 @@ class Solution:
         recursive_find(candidates, target, [], 0)
         
         return output
-                
-        
-        
-        
-        
-        
-        
         
         '''
         output = []
