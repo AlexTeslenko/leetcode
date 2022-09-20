@@ -13,7 +13,7 @@ class Solution:
             for i in range(start, len(candidates)):
                 cur_comb.append(candidates[i])
                 
-                recursive_find(candidates, cur_target-candidates[i], cur_comb[:], i)
+                recursive_find(candidates, cur_target-candidates[i], cur_comb, i)
                 cur_comb.pop()
             
         
