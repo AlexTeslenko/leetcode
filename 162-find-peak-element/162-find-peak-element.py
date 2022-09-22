@@ -2,6 +2,24 @@ class Solution:
     def findPeakElement(self, nums: List[int]) -> int:
         if len(nums) == 1:
             return 0
+        
+        low, high = 0, len(nums)
+        
+        while low <= high:
+            middle = low + (high - low) // 2
+            
+            if middle-1 >= 0 and nums[middle] < nums[middle-1]:
+                high = middle - 1
+            elif middle+1 < len(nums) and nums[middle] < nums[middle+1]:
+                low = middle + 1
+            else:
+                return middle
+        
+        return high
+    
+    '''
+            if len(nums) == 1:
+            return 0
 
         
         left_ptr, right_ptr = 0, len(nums) - 1
@@ -15,5 +33,7 @@ class Solution:
                 left_ptr = middle + 1
             else:
                 return middle
+    
+    '''
+
         
-        return 0
