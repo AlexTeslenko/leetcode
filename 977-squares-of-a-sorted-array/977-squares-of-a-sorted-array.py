@@ -6,7 +6,6 @@ class Solution:
                 min_num =  abs(num)
                 min_indx = i
                 
-        print(min_indx)
         
         output = []
         left_ptr, right_ptr = min_indx - 1, min_indx
