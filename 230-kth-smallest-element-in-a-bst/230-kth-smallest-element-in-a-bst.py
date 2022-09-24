@@ -15,7 +15,6 @@ class Solution:
             
             traverse_tree(root.left)
             heapq.heappush(heap, -root.val)
-            print(heap)
             if len(heap) > k:
                 heapq.heappop(heap)
             traverse_tree(root.right)
