@@ -8,7 +8,6 @@ class Solution:
     
         def build_distances(row, col, num_visited):
             dirs = [(1, 0), (0, -1), (-1, 0), (0, 1)]
-            #cur_grid = [[0 for i in self.grid[0]] for j in self.grid]
             visited = [[0 for i in self.grid[0]] for j in self.grid]
             
             visited[row][col] = 1
@@ -27,7 +26,6 @@ class Solution:
                             queue.append((new_row, new_col))
                 steps += 1
             
-            #return cur_grid
         
         total_houses = 0
         num_visited = -1
