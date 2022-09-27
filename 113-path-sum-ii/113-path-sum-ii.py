@@ -17,8 +17,10 @@ class Solution:
             if cur_target == 0 and not root.left and not root.right:
                 output.append(cur_path[:])
             
-            dfs(root.left, cur_target, cur_path[:])
-            dfs(root.right, cur_target, cur_path[:])
+            dfs(root.left, cur_target, cur_path)
+            dfs(root.right, cur_target, cur_path)
+            
+            cur_path.pop()
         
         
         dfs(root, targetSum, [])
