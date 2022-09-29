@@ -8,7 +8,7 @@ class Solution:
             if turt == hair:
                 break
         
-        hair = nums[0]
+        turt = nums[0]
         while hair != turt:
             turt = nums[turt]
             hair = nums[hair]
