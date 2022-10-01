@@ -12,7 +12,6 @@ class Solution:
                     ranges.append((i, i+word_len))
                 i += 1
         
-        print(ranges)
         if not ranges:
             return s
         
@@ -33,8 +32,6 @@ class Solution:
                 rn_end = cur_range[1]
         
         merged_ranges.append((rn_start, rn_end))
-        
-        print(merged_ranges)
         
         output_str = s
         begin = 0
