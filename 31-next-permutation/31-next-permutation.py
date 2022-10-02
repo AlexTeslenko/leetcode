@@ -8,7 +8,6 @@ class Solution:
         
         peack = -1
         for i in range(len(nums)-1, 0, -1):
-            print(i)
             if nums[i] > nums[i-1]:
                 
                 peack = i
@@ -20,7 +19,7 @@ class Solution:
             i += 1
         
         nums[peack-1], nums[i-1] = nums[i-1], nums[peack-1]
-        print(peack)
+
         if peack == -1:
             peack = 0
             
