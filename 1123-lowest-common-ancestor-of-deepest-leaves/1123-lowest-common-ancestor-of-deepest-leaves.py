@@ -16,7 +16,6 @@ class Solution:
             left_level = dfs(root.left, layer+1)
             right_level = dfs(root.right, layer+1)
             
-            print(root.val, left_level, right_level)
             if left_level > self.max_layer_1 or right_level > self.max_layer_1 or(right_level == left_level == self.max_layer_1):
                 if left_level == right_level:
                     self.max_layer_1 = left_level
