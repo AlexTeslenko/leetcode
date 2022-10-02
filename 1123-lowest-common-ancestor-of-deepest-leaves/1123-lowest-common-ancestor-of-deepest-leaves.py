@@ -32,7 +32,24 @@ class Solution:
             
             return max(left_level, right_level)
         
-        dfs(root, 0)
+        
+        def dfs2(root, depth):
+            
+            self.max_layer_1 = max(self.max_layer_1, depth)
+            
+            if not root:
+                return depth
+            
+            left_depth = dfs2(root.left, depth+1)
+            right_depth = dfs2(root.right, depth+1)
+            
+            if left_depth == right_depth == self.max_layer_1:
+                self.LCA = root
+            
+            return max(left_depth, right_depth)
+        
+        #dfs(root, 0)
+        dfs2(root, 0)
         return self.LCA
             
         
