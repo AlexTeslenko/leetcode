@@ -3,12 +3,20 @@ class Solution:
         letter_ranges = {}
         for i, ch in enumerate(s):
             if ch not in letter_ranges:
-                range_start = i
-                range_end = i
-                for j in range(i, len(s)):
-                    if s[j] == ch:
-                        range_end =  j
-                letter_ranges[ch] = (range_start, range_end)
+                letter_ranges[ch] = [i, i]
+            letter_ranges[ch][1] = i
+            
+        
+        
+        
+        #for i, ch in enumerate(s):
+        #    if ch not in letter_ranges:
+        #        range_start = i
+        #        range_end = i
+        #        for j in range(i, len(s)):
+        #            if s[j] == ch:
+        #                range_end =  j
+        #        letter_ranges[ch] = (range_start, range_end)
         
         letter_ranges_list = list(letter_ranges.values())
         
