@@ -27,7 +27,6 @@ class Solution:
         
         merged_ranges.append((range_start, range_end))
         
-        print(merged_ranges)
         output = [rn[1] - rn[0] + 1 for rn in merged_ranges]
         return output
         
