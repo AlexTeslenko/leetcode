@@ -10,7 +10,7 @@ class Solution:
                         range_end =  j
                 letter_ranges[ch] = (range_start, range_end)
         
-        letter_ranges_list = sorted(list(letter_ranges.values()))
+        letter_ranges_list = list(letter_ranges.values())
         
         merged_ranges = []
         
