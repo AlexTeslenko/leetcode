@@ -9,7 +9,6 @@ class Solution:
                 cost_per_day[i] = min(cost_per_day[max(0, i-1)]+costs[0],
                                       cost_per_day[max(0, i-7)]+costs[1],
                                       cost_per_day[max(0, i-30)]+costs[2])
-        print(cost_per_day)
         return cost_per_day[-1]
         
         
