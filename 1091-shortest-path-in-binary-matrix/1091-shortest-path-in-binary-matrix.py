@@ -1,6 +1,75 @@
 from collections import deque
 class Solution:
     def shortestPathBinaryMatrix(self, grid: List[List[int]]) -> int:
+        if grid[0][0] == 1:
+            return -1
+        dirs = [(1,0), (1,-1), (0, -1), (-1,-1), (-1, 0), (-1, 1), (0,1), (1,1)]
+        visited = [[0 for i in range(len(grid[0]))] for j in range(len(grid))]
+        
+        queue = deque([(0, 0, 1)])
+        visited[0][0] = 1
+        path_len = 0
+        
+        while queue:
+            row, col, cur_path_len = queue.popleft()
+            if row == len(grid)-1 and col == len(grid[0]) - 1:
+                    path_len = cur_path_len
+                    return path_len
+                    
+            print(path_len)
+            for dr in dirs:
+                new_row, new_col = row + dr[0], col + dr[1]
+                
+                    
+                if 0 <= new_row < len(grid) and 0 <= new_col < len(grid[0]) and not visited[new_row][new_col] and grid[new_row][new_col] != 1:
+                    visited[new_row][new_col] = 1
+                    queue.append((new_row, new_col, cur_path_len+1))
+        
+        return -1
+                    
+                
+            
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        '''
+        
+        
         dirs = [(1, 0), (1,-1), (0, -1), (-1, -1), (-1, 0), (-1, 1), (0, 1), (1, 1)]
         min_path_lenght = 1000
         if grid[0][0] == 1:
@@ -22,6 +91,7 @@ class Solution:
                     grid[new_row][new_col] = 1
         
         return min_path_lenght if min_path_lenght != 1000 else -1
+        '''
             
     '''
         if grid[0][0] != 0:
