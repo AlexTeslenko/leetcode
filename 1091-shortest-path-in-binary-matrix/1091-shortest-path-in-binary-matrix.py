@@ -3,6 +3,7 @@ class Solution:
     def shortestPathBinaryMatrix(self, grid: List[List[int]]) -> int:
         if grid[0][0] == 1:
             return -1
+        
         dirs = [(1,0), (1,-1), (0, -1), (-1,-1), (-1, 0), (-1, 1), (0,1), (1,1)]
         visited = [[0 for i in range(len(grid[0]))] for j in range(len(grid))]
         
@@ -16,7 +17,6 @@ class Solution:
                     path_len = cur_path_len
                     return path_len
                     
-            print(path_len)
             for dr in dirs:
                 new_row, new_col = row + dr[0], col + dr[1]
                 
@@ -28,44 +28,6 @@ class Solution:
         return -1
                     
                 
-            
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         
         '''
         
