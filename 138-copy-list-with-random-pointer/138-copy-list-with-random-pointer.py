@@ -32,7 +32,6 @@ class Solution:
         
         while first_node:
             if first_node.random:
-                first_node_random_val = first_node.random.val
                 first_node_copy.random = node_dict[first_node.random]
             
             first_node_copy = first_node_copy.next
