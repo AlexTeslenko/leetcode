@@ -9,6 +9,70 @@ class Node:
 
 class Solution:
     def copyRandomList(self, head: 'Optional[Node]') -> 'Optional[Node]':
+        if not head:
+            return 
+        
+        new_head = Node(head.val, head.next)
+        node_dict = {head: new_head}
+        
+        first_node = head
+        first_node_copy = new_head
+        
+        
+        while first_node.next:
+            new_node = Node(first_node.next.val)
+            node_dict[first_node.next] = new_node
+            
+            first_node_copy.next = new_node
+            first_node_copy = first_node_copy.next
+            first_node =  first_node.next
+        
+        first_node = head
+        first_node_copy = new_head
+        
+        print(node_dict)
+        while first_node:
+            if first_node.random:
+                first_node_random_val = first_node.random.val
+                first_node_copy.random = node_dict[first_node.random]
+            
+            first_node_copy = first_node_copy.next
+            first_node =  first_node.next
+        
+        return new_head
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        '''
         self.visited_dict = {}
         head = self.copyList(head)
         
@@ -28,3 +92,4 @@ class Solution:
         node.random = self.copyList(head.random)
         
         return node
+        '''
