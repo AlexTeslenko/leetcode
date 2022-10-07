@@ -30,7 +30,6 @@ class Solution:
         first_node = head
         first_node_copy = new_head
         
-        print(node_dict)
         while first_node:
             if first_node.random:
                 first_node_random_val = first_node.random.val
@@ -40,36 +39,6 @@ class Solution:
             first_node =  first_node.next
         
         return new_head
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         
         
         '''
