@@ -4,7 +4,6 @@ class RandomizedSet:
     def __init__(self):
         self.elements = []
         self.el_to_idx = {}
-        self.random_set = set()
         
 
     def insert(self, val: int) -> bool:
@@ -24,6 +23,7 @@ class RandomizedSet:
         last_el = self.elements[-1]
         self.elements[idx] = last_el
         self.el_to_idx[last_el] = idx
+        
         self.elements.pop()
         del self.el_to_idx[val]
         
@@ -31,8 +31,7 @@ class RandomizedSet:
         
 
     def getRandom(self) -> int:
-        rand_idx = random.randint(0, len(self.elements)-1)
-        return self.elements[rand_idx]
+        return choice(self.elements)
         
 
 
