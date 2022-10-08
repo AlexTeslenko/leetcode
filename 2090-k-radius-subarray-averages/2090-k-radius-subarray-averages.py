@@ -4,7 +4,6 @@ class Solution:
         cur_sum = 0
         first_sum = True
         for i in range(len(nums)):
-            #cur_sum += nums[i]
             if i - k < 0 or i + k >= len(nums):
                 averages.append(-1)
             else:
@@ -15,8 +14,6 @@ class Solution:
                     cur_sum -= nums[i-k-1]
                     cur_sum += nums[i+k]
                     
-                
-                print(i, cur_sum)
                 averages.append(int(cur_sum/(k*2+1)))
         
         return averages
