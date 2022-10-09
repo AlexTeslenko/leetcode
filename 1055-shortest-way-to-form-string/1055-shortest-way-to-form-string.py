@@ -18,19 +18,15 @@ class Solution:
                
                 
             if found_substr:
-                
-                print(cur_target[j:])
                 num_sub = form_str(source, cur_target[j:])
                 if num_sub == -1:
                     return -1
                 else:
                     return 1 + num_sub  
             else:
-                print("not found")
                 not_found_substr = True
                 return -1
         
-        print(not_found_substr)
         return form_str(source, target)
         
         if not_found_substr:
