@@ -28,9 +28,7 @@ class Solution:
                 return -1
         
         return form_str(source, target)
-        
-        if not_found_substr:
-            return -1
+
                     
                     
             
