@@ -2,7 +2,6 @@ from collections import deque
 class Solution:
     def countComponents(self, n: int, edges: List[List[int]]) -> int:
         parent_to_children = {}
-        parents = set()
         num_components = 0
         visited_nodes = [False for i in range(n)]
         
@@ -14,10 +13,8 @@ class Solution:
             
             parent_to_children[child].append(pr)
             parent_to_children[pr].append(child)
-            
-            parents.add(pr)
-        
-        print(parent_to_children)
+
+
         for pr in range(n):
             queue = deque([pr])
             if not visited_nodes[pr]:
