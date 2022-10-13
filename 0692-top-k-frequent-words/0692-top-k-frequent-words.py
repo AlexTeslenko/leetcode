@@ -11,8 +11,6 @@ class Solution:
         for num in nums_word:
             nums_word[num].sort()
         
-        print(nums_word)
-        
         nums_sorted = list(nums_word.items())
         nums_sorted.sort(key=lambda x: x[0], reverse=True)
         
