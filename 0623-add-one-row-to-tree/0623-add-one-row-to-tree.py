@@ -15,7 +15,6 @@ class Solution:
                 return
             
             if cur_depth+1 == depth:
-                print(cur_depth+1)
                 new_node_left = TreeNode(val)
                 new_node_right = TreeNode(val)
                 if root.left:
