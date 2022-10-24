@@ -5,8 +5,6 @@ class StockPrice:
         self.time_to_price = {}
         self.price_to_freq = SortedDict()
         self.latest = None
-        self.maximum_price = None
-        self.minimum_price = None
 
     def update(self, timestamp: int, price: int) -> None:
         if timestamp in self.time_to_price:
