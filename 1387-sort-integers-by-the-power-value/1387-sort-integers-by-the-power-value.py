@@ -21,7 +21,6 @@ class Solution:
             powers.append((total_power, num))
             
         powers.sort(key=lambda x: x[0])
-        print(powers)
         
         return powers[k-1][1]
             
