@@ -14,47 +14,8 @@ class Solution:
         merged_intervals.append([start_interval, end_interval])
         
         return merged_intervals
-                
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
+    ''' 
         intervals.sort(key=lambda x: x[0])
         
         merged_intervals = []
@@ -72,9 +33,9 @@ class Solution:
         merged_intervals.append([start_int, end_int])
         
         return merged_intervals
+    '''
         
-        
-        '''
+    '''
         intervals.sort(key=lambda x: x[0])
         merged_intervals = []
         i = 1
@@ -93,9 +54,9 @@ class Solution:
         merged_intervals.append(cur_inteval)
         
         return merged_intervals
-        '''
+    '''
                                                                             
-        '''
+    '''
         i = 0
         merged_intervals = []
         while i < len(intervals):
@@ -111,4 +72,4 @@ class Solution:
             i = j
         
         return merged_intervals
-        '''
+    '''
